@@ -1,0 +1,28 @@
+<html>
+<div style="width:20%;background-color:gray;float:left">
+<ul>
+    {% for album in a %}
+       <li><a href="/index/?id={{ album.id }}">{{ album.static_album }}</a></li>
+    {% endfor %}
+</ul>
+</div>
+<form action="/route/" method="">
+<div style="width:80%;background-color:yellow;float:right">
+Welcome to the world of songs...
+<ul>
+    {% for song in b %}
+        <input type="checkbox" name="{{ song.song_track }}" value="{{ song.song_track }}">{{ song.song_track }}<br>
+    {% endfor %}
+    <input type="hidden" name="num" value="{{ num }}" checked="checked">
+</ul>
+</div>
+<input type="submit" value="Add to Playlist" name = "button">
+<input type="submit" value="BUY" name = "button" >
+</form>
+<!--<a href = "/buy">BUY</a>-->
+<br><a href="/playlist">View Playlist</a><br>
+<align = right><a href="/logout">LogOut</a><br>
+<a href="/dashboard">DASHBOARD</a><br>
+
+
+</html>

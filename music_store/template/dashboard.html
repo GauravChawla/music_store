@@ -1,0 +1,22 @@
+<html>
+<body>
+<div style = "width : 20%; float : left">
+<form action = "/dashboard">
+    {% for check in b  %}
+        <input type = "checkbox" name = "{{ check }}" value =" {{ check }}">{{ check }}<br>
+    {% endfor  %}
+    <input type = "submit" value = "FILTER">
+</form>
+</div>
+<div style = "width : 80%; float : right">
+<table border = 5>
+<th>Genre</th>
+<th>Track</th>
+<th>Artist</th>
+<th>Hits</th>
+    {% for song in a %}
+       <tr><td> {{song.song_genre}}</td><td>{{ song.song_track }}</td><td>{{ song.song_artist }}</td><td>{{song.song_hits}}</td></tr>
+    {% endfor %}
+</div>
+</body>
+</html>

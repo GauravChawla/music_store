@@ -102,9 +102,9 @@ def buy(request):
 def dashboard(request):
     if (request.GET):
         dct = request.GET.keys()
-        songs_list1 = Songs.objects.filter(song_genre__in =  dct).order_by('song_genre','-song_hits')
+        songs_list1 = Songs.objects.filter(song_genre__in =  dct).order_by('-song_hits','song_genre')
     else:
-        songs_list = Songs.objects.order_by('song_genre','-song_hits')
+        songs_list = Songs.objects.order_by('-song_hits','song_genre')
     genres = list()
     genres1 = list()
     genres = Songs.objects.distinct('song_genre')

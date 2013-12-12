@@ -11,7 +11,7 @@
 Welcome to the world of songs...
 <ul>
     {% for song in b %}
-        <input type="checkbox" name="{{ song.song_track }}" value="{{ song.song_track }}">{{ song.song_track }}<br>
+        <input type="checkbox" name="{{ song.song_track }}" value="{{ song.song_track }}">{{ song.song_track }} by {{ song.song_artist }}<br>
     {% endfor %}
     <input type="hidden" name="num" value="{{ num }}" checked="checked">
 </ul>

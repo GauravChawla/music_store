@@ -69,7 +69,7 @@ def playlist(request):
     sids = list()
     user_playlist = Playlist.objects.filter(u_id = user)
     for sid in user_playlist:
-        sids.append(sid.id)
+        sids.append(sid.s_id_id)
     user_playlist = Songs.objects.filter(id__in = sids).order_by('-song_hits')
     return render_to_response('playlist.html',{'playlist':user_playlist})
 

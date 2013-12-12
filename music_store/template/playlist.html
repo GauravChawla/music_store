@@ -1,7 +1,7 @@
 <html>
 <ul>
 {% for song in playlist %}
-    <li>{{ song.song_track }}</li>
+    <li>{{ song.song_track }} by {{ song.song_artist  }}</li>
 {%  endfor %}
 </ul>
 </html>
